@@ -1,5 +1,5 @@
 class App < Sinatra::Base
   get '/' do
-    'Hello World'
+    'Hello World, Docker, Docker Compose and Kubernetes!'
   end
 end
