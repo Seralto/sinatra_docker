@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  web:
+    build: .
+    ports:
+      - 9292:9292
+    volumes:
+      - .:/app
+    command: bundle exec rackup --host 0.0.0.0
