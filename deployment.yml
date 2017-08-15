@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: sinatra-app
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sinatra-app
+    spec:
+      containers:
+        - name: sinatra-app
+          image: gcr.io/sergio-176915/sinatra-app:0.0.1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 9292
